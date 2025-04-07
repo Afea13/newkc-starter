@@ -1,0 +1,95 @@
+/* 
+If you use global CSS like we do here(not recommended) 
+Be mindful that the CSS of the login theme may clash with the CSS of the account theme in Storybook (and only in storybook).
+This is why I made sure to use .my-root-account-class instead of .my-root-class that is already used in the login theme.
+*/
+
+body {
+  background-color: #08f128;
+  margin: 0px;
+}
+
+.sb-show-main.sb-main-padded {
+  padding: 0px;
+}
+.main-stack-container form {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+}
+.main-stack-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+
+  .account-edit-container {
+    padding-left: calc(100vw - 100%);
+    &.account-edit-container-mobile {
+      padding-left: 0px;
+    }
+  }
+
+  .terms-and-conditions {
+  
+    width: 100%;
+
+    margin-top: 32px;
+  }
+
+  .account-left-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .leftmenu a {
+    text-decoration: none;
+  }
+  .totp-link {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
+  .account-edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-grow: 1;
+
+    .account-form {
+      .account-form-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-grow: 1;
+      }
+      a {
+        text-decoration: underline;
+        margin-top: 32px;
+      }
+    }
+
+    .account-form-buttons {
+      width: 100%;
+      margin-top: 24px;
+      margin-bottom: 40px;
+    }
+
+    .session-table-header {
+      --TableCell-headBackground: transparent;
+    }
+
+    .session-table-responsive {
+      display: block;
+    }
+    .session-table-responsive td {
+      vertical-align: top;
+    }
+  }
+}

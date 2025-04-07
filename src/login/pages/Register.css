@@ -1,0 +1,6 @@
+.formLabel.required::before {
+    content: '*';
+    color: var(--joy-palette-danger-500);
+    margin-right: 0.2em;
+  }
+  
